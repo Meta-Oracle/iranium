@@ -1,66 +1,29 @@
-## Foundry
+# Iranium
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A futuristic geopolitical command-room visualizer for Iranium, designed for local demos and Vercel deployment.
 
-Foundry consists of:
+## Features
+- Black/red terminal-inspired UI
+- Live-style scenario feed
+- Interactive command panels
+- ElizaOS-style commentary layer
+- Vercel-ready static frontend and serverless API
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Run locally
 
-## Documentation
+### Frontend
+```bash
+python -m http.server 3000
+```
+Then open http://localhost:3000/visualizer/index.html
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+### API
+```bash
+node api/bridge.js
 ```
 
-### Test
+## Deploy to Vercel
+1. Push this repository to GitHub.
+2. Import it into Vercel.
+3. Vercel will serve the static visualizer and the API route automatically.
 
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
