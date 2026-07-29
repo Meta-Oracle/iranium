@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iranium War Room Visualizer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">ELIZAOS // IRANIUM COMMAND GRID</p>
+          <h1>WAR ROOM // LIVE GEOPOLITICAL HOLOGRAM</h1>
+          <p class="subcopy">
+            Sleek black-red command interface for tension spikes, oil shocks,
+            and live missile-strike telemetry.
+          </p>
+        </div>
+        <div class="topbar-right">
+          <div id="statusPill" class="status-pill">SYNCING STRIKE FEED…</div>
+          <button id="refreshButton" type="button">RELOAD</button>
+        </div>
+      </header>
+
+      <section class="dashboard">
+        <div class="canvas-panel draggable-panel" data-panel="globe">
+          <div class="panel-handle">
+            <span>MISSION: GLOBAL RISK</span>
+            <span>NODE: ORBITAL INTEL</span>
+            <span>THREAT LEVEL: RED</span>
+          </div>
+          <canvas id="riskCanvas" width="980" height="600"></canvas>
+          <div class="legend">
+            <span><i class="dot danger"></i> LIVE STRIKE</span>
+            <span><i class="dot warning"></i> MARKET SHOCK</span>
+            <span><i class="dot calm"></i> BASELINE</span>
+          </div>
+        </div>
+
+        <aside class="feed-panel draggable-panel" data-panel="feed">
+          <div class="panel-handle">
+            <h2>TERMINAL FEED</h2>
+            <span class="feed-pill">ACTIVE</span>
+          </div>
+          <div id="feedList" class="feed-list"></div>
+        </aside>
+      </section>
+
+      <section class="utility-panel draggable-panel" data-panel="utility">
+        <div class="panel-handle">
+          <h3>TOKEN UTILITY LAYER</h3>
+          <span class="feed-pill">CONNECTED</span>
+        </div>
+        <div class="utility-grid">
+          <div class="utility-card">
+            <p class="utility-label">CONTRACT</p>
+            <p id="contractAddress" class="utility-value">0xC8E2D43AF88cAE6Baf279ce9328bccCFd4c7E02d</p>
+          </div>
+          <div class="utility-card">
+            <p class="utility-label">UTILITY MODE</p>
+            <p class="utility-value">ACCESS • GOVERNANCE • RISK SIGNAL</p>
+          </div>
+          <div class="utility-card">
+            <p class="utility-label">PASSIVE ACTION</p>
+            <p class="utility-value">DROPS SIGNALS TO THE FEED</p>
+          </div>
+        </div>
+        <div class="utility-actions">
+          <button class="action-btn" data-action="signal">EMIT SIGNAL</button>
+          <button class="action-btn" data-action="brief">REQUEST BRIEF</button>
+          <button class="action-btn" data-action="escalate">ESCALATE</button>
+        </div>
+      </section>
+
+      <section class="chat-panel draggable-panel" data-panel="chat">
+        <div class="panel-handle">
+          <h3>ELIZA OS COMMENTARY</h3>
+          <span class="feed-pill">LIVE</span>
+        </div>
+        <div id="chatLog" class="chat-log"></div>
+        <form id="chatForm" class="chat-form">
+          <input id="chatInput" type="text" placeholder="> query war commentary / threat model" />
+          <button type="submit">SEND</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
